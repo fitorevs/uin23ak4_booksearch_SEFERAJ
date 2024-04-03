@@ -10,7 +10,7 @@ export default function BookCard({ books, setQuery }) {
     return (
         <section>
             <div className="bookCard">
-                <h1>Find your book</h1>
+                <h1>Discover Your Next Favorite Read: Explore Our Book Universe</h1>
             </div>
             <div className="homePage">
                 {/* Mapper gjennom bøkene og viser informasjon om hver bok */}
