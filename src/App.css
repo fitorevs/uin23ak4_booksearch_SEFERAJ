@@ -17,10 +17,9 @@
   --smoke: #eeecec;
   --red: #ff0000;
   --blue: #002aff;
-  --darkBlue: #1b54a2;
-  --lighBlue: #697d9d;
+  --darkBlue: #114c9f86;
   --darkGray: #131313;
-  
+
   /* Definerer fonter og størrelser */
   --fontFamily: 'Open Sans', sans-serif;
   --fontWeightRegular: 400;
@@ -35,11 +34,11 @@
 
 /* Stiler for hele dokumentet */
 body {
-  background-color: var(--smoke);
-  font-family: var(--fontFamily); 
+  background-color: var(--darkGray);
+  font-family: var(--fontFamily);
   font-weight: var(--fontWeightRegular);
-  font-size: var(--fontSize-small); 
-  margin: 0; 
+  font-size: var(--fontSize-small);
+  margin: 0;
 }
 
 /* Definisjon av stil for rot-elementet */
@@ -51,155 +50,170 @@ body {
 
 /* Stil for logoen */
 .logo {
-  background-color: var(--lighBlue); 
-  color: var(--white); 
-  padding: 0.5rem; 
-  margin: 0.5rem; 
+  background-color: var(--darkBlue);
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 /* Stiler for navigasjonsmenyen */
 nav {
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
 }
 
 nav ul {
-  list-style: none; 
-  display: flex; 
+  list-style: none;
+  display: flex;
   gap: 1rem;
-  padding: 0; 
+  padding: 0;
 }
 
 nav ul li a {
-  color: var(--white); 
-  background-color: var(--black); 
-  padding: 0.5rem; 
-  margin: 0.5rem; 
+  color: var(--white);
+  background-color: var(--black);
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 nav ul li a:hover {
-  background-color: var(--smoke); 
-  color: var(--lighBlue);
+  background-color: var(--darkBlue);
+  color: var(--white);
   border: 1px solid;
 }
 
 /* Stiler for hovedinnholdet */
 main {
-  background-color: var(--black); 
-  color: var(--smoke); 
+  background-color: var(--black);
+  color: var(--smoke);
 }
 
 main section {
-  gap: 2rem; 
-  min-height: 600px; 
+  gap: 2rem;
+  min-height: 600px;
 }
 
 main section .bookCard {
-  background-image: url(../src/assets/img/library.jpg); 
-  background-size: 100%; 
-  min-height: 200px; 
+  background-image: url(../src/assets/img/library.jpg);
+  background-size: 100%;
+  min-height: 200px;
 }
 
 main section h1 {
-  color: var(--black); 
-  background-color: var(--white); 
-  font-size: var(--fontSize-large); 
-  padding: 1rem; 
-  opacity: 0.5; 
-  margin: auto; 
+  color: var(--black);
+  background-color: var(--white);
+  font-size: var(--fontSize-large);
+  padding: 1rem;
+  opacity: 0.5;
+  margin: auto;
 }
 
 main section h2 {
-  display: flex; 
-  justify-content: center; 
-  background-color: var(--black); 
-  color: var(--white); 
-  font-style: var(--fontTalic); 
+  display: flex;
+  justify-content: center;
+  background-color: var(--darkGray);
+  color: var(--white);
+  font-style: var(--fontTalic);
+  padding: 1rem;
 }
 
 article {
-  background-color: var(--darkGray); 
-  padding: 0.5rem; 
+  background-color: var(--darkGray);
+  padding: 0.5rem;
 }
 
 .searchBar {
-  display: flex; 
-  justify-content: center; 
-  padding: 2rem; 
-  background-image: url(../src/assets/img/library.jpg); 
-  background-size: 100%; 
-  min-height: 50px; 
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url(../src/assets/img/library.jpg);
+  background-size: 100%;
+  min-height: 50px;
 }
 
 h3 {
-  font-size: var(--fontSize-small); 
+  font-size: var(--fontSize-small);
 }
 
 p {
-  font-size: var(--fontSize-tiny); 
-  color: var(--gray); 
+  font-size: var(--fontSize-tiny);
+  color: var(--gray);
 }
 
 .searchBar input {
-  padding: 0.5rem; 
-  margin: 0.5rem; 
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .searchPage {
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 3rem; 
-  justify-content: space-between; 
-  padding: 1rem 4rem; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 1rem 4rem;
 }
 
 .searchPage article {
-  width: 28%; 
-  background-color: var(--darkGray); 
-  padding: 1rem; 
-  text-align: center; 
+  width: 28%;
+  background-color: var(--darkGray);
+  padding: 1rem;
+  text-align: center;
 }
 
 main section div {
-  display: flex; 
-  flex-wrap: wrap; 
-  text-align: center; 
-  gap: 1rem; 
-  justify-content: space-between; 
-  padding: 1rem 4rem; 
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 4rem;
 }
 
 main section div article {
-  width: 30%; /* Bredden på hver artikkel */
+  width: 30%;
+  /* Bredden på hver artikkel */
 }
 
 main section div article button {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .error {
-  color: var(--red); /* Tekstfarge for feilmeldinger */
+  color: var(--red);
+  /* Tekstfarge for feilmeldinger */
 }
 
 .buy {
-  color: var(--blue); /* Tekstfarge for "Buy" -knappen */
+  color: var(--blue);
+  /* Tekstfarge for "Buy" -knappen */
 }
 
 .soldout {
-  color: var(--red); /* Tekstfarge for "Sold out" -knappen */
+  color: var(--red);
+  /* Tekstfarge for "Sold out" -knappen */
+}
+
+footer {
+  background-color: var(--darkGray);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
 }
 
 /* Media Query for mindre skjermer */
 @media screen and (max-width: 768px) {
   main section div article {
-    width: 100%; /* Full bredde for artikler på mindre skjermer */
+    width: 100%;
+    /* Full bredde for artikler på mindre skjermer */
   }
 
   main section div {
-    text-align: center; /* Sentrerer teksten på mindre skjermer */
+    text-align: center;
+    /* Sentrerer teksten på mindre skjermer */
   }
 
   .searchPage article {
-    width: 100%; /* Full bredde for artikler i søkeresultatene på mindre skjermer */
+    width: 100%;
+    /* Full bredde for artikler i søkeresultatene på mindre skjermer */
   }
 }
