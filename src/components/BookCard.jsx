@@ -16,17 +16,12 @@ export default function BookCard({ books, setQuery }) {
                 {/* Mapper gjennom bøkene og viser informasjon om hver bok */}
                 {books?.map(item =>
                     <article key={item.key}>
-                        {/* Tittel på boken */}
-                        <h3>{item.title}</h3>
-                        {/* Bilde av bokomslaget i mediumstr. */}
-                        <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} alt="Book Cover" />
-                        {/* Forfatter av boken */}
-                        <p>Author: {item.author_name}</p>
-                        {/* Første publisering av boken */}
-                        <p>First published in: {item.first_publish_year}</p>
-                        {/* Gjennomsnittlig vurdering av boken */}
-                        <p>Average rating: {item.ratings_average}</p>
-                        {/* Knapp for å kjøpe boken på Amazon, avhengig av ISBN-nummer. FIkk ikke til å bruke amazon_id*/}
+                        <h3>{item.title}</h3> {/* Tittel på boken */}
+                        <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} alt="Book Cover" />  {/* Bilde av bokomslaget i mediumstr. */}
+                        <p>Author: {item.author_name}</p>  {/* Forfatter av boken */}
+                        <p>First published in: {item.first_publish_year}</p> {/* Første publisering av boken */}
+                        <p>Average rating: {item.ratings_average}</p> {/* Gjennomsnittlig vurdering av boken. NB! Klarte ikke få opp all ratings.*/}
+                        {/* Knapp for å kjøpe boken på Amazon, avhengig av ISBN-nummer. Fikk ikke til å bruke amazon_id*/}
                         <button>
                             <a href={`https://www.amazon.com/s?k=${item.isbn ? item.isbn[0] : null}`} className={item.isbn ? "buy" : "soldout"}>{item.isbn ? "Buy on Amazon" : "Sold out"}</a>
                         </button>

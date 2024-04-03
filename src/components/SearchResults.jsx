@@ -48,7 +48,8 @@ export default function SearchResult({ books, setQuery, currentQuery, prevSearch
                         <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} alt="BookCover" /> {/* Bilde av bokomslaget */}
                         <p>Author: {item.author_name}</p> {/* Forfatter av boken */}
                         <p>First published in: {item.first_publish_year}</p> {/* Første publisering av boken */}
-                        <p>Average rating: {item.ratings_average}</p>  {/* Gjennomsnittlig vurdering av boken */}
+                        <p>Average rating: {item.ratings_average}</p>  {/* Gjennomsnittlig vurdering av boken. NB! Klarte ikke få opp all ratings. */}
+                        {/* Knapp for å kjøpe boken på Amazon, avhengig av ISBN-nummer. Fikk ikke til å bruke amazon_id*/}
                         <button>
                             <a href={`https://www.amazon.com/s?k=${item.isbn ? item.isbn[0] : null}`} className={item.isbn ? "buy" : "soldout"}>{item.isbn ? "Buy on Amazon" : "Sold out"}</a>
                         </button>
