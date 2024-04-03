@@ -7,7 +7,7 @@ export default function SearchResult({ books, setQuery, currentQuery, prevSearch
 
     useEffect(() => {
         setQuery(prevSearch); 
-    }, [prevSearch]);
+    }, []);
 
     // Funksjon for å håndtere innsending av søket
     const handleSubmit = (e) => {
