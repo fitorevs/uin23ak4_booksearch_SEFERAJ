@@ -25,9 +25,10 @@ export default function BookCard({ books, setQuery }) {
                         <p>First published in: {item.first_publish_year}</p> {/* Første publisering av boken */}
                         <p>Average rating: {item.ratings_average}</p> {/* Gjennomsnittlig vurdering av boken. NB! Klarte ikke få opp all ratings.*/}
                         {/* Knapp for å kjøpe boken på Amazon, avhengig av ISBN-nummer.*/}
-                        <button>
+                        <button className={item.isbn ? "available" : "not-available"}>
                             <Link to={("id_amazon" in item) ? `https://www.amazon.com/s?k=${item.id_amazon[0]}` : (item.isbn ? `https://www.amazon.com/s?k=${item.isbn[0]}` : "#")}>
-                                {("id_amazon" in item || item.isbn) ? "Buy on Amazon" : "No link available"}</Link>
+                                {("id_amazon" in item || item.isbn) ? "Buy on Amazon" : "No link available"}
+                            </Link>
                         </button>
                     </article>
                 )}

@@ -183,12 +183,12 @@ main section div article button {
   /* Tekstfarge for feilmeldinger */
 }
 
-.buy {
+.available a {
   color: var(--blue);
   /* Tekstfarge for "Buy" -knappen */
 }
 
-.soldout {
+.not-available a {
   color: var(--red);
   /* Tekstfarge for "Sold out" -knappen */
 }
