@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // En funksjonell komponent for å vise søkeresultater
 export default function SearchResult({ books, setQuery, currentQuery, prevSearch, updatePrevSearch }) {
@@ -51,7 +52,7 @@ export default function SearchResult({ books, setQuery, currentQuery, prevSearch
                         <p>Average rating: {item.ratings_average}</p>  {/* Gjennomsnittlig vurdering av boken. NB! Klarte ikke få opp all ratings. */}
                         {/* Knapp for å kjøpe boken på Amazon, avhengig av ISBN-nummer. Fikk ikke til å bruke amazon_id*/}
                         <button>
-                            <a href={`https://www.amazon.com/s?k=${item.isbn ? item.isbn[0] : null}`} className={item.isbn ? "buy" : "soldout"}>{item.isbn ? "Buy on Amazon" : "Sold out"}</a>
+                            <Link to={`https://www.amazon.com/s?k=${("id_amazon" in item) ? item.id_amazon[0] : item.isbn}`} >Buy om Amazon</Link>
                         </button>
                     </article>
                 )}

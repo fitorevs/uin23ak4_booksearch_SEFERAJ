@@ -21,7 +21,7 @@ function App() {
   // Funksjon for å hente data fra Open Library API
   const fetchData = async (searchQuery) => {
     try {
-      const response = await fetch(`https://openlibrary.org/search.json?title=${searchQuery}`);
+      const response = await fetch(`https://openlibrary.org/search.json?q==${searchQuery}`);
       const data = await response.json();
       return data.docs;
     } catch (error) {
@@ -34,6 +34,7 @@ function App() {
   useEffect(() => {
     const getBooks = async () => {
       const fetchedBooks = await fetchData(currentQuery);
+      console.log(fetchedBooks);
       setData(fetchedBooks); // Oppdaterer bøker-tilstanden med hentede data
     };
     getBooks();
